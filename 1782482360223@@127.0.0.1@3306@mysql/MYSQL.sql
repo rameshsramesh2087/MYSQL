@@ -29,3 +29,25 @@ TRUNCATE TABLE CUSTOMER;
 
 ---RENAME TABLE
 ALTER TABLE CUSTOMER RENAME TO CLIENT;
+
+create table p_id(
+    p_id varchar(100)not null,
+    p_name varchar(100) not null,
+    p_price decimal(10,2) not null);
+
+    /* ALTER TABLE  table_name 
+    ADD CONSTRANT constraint_name 
+    constarint_type(column_name) */
+
+    ALTER TABLE p_id
+    ADD CONSTRAINT pk_pk_id
+    PRIMARY KEY(p_id);
+     select * from p_id;
+
+     ALTER TABLE p_id
+     ADD CONSTRAINT UQ_p_name
+     UNIQUE(p_name);
+
+ALTER TABLE p_id
+ADD CONSTRAINT chk_P_price
+CHECK(p_price>0)
