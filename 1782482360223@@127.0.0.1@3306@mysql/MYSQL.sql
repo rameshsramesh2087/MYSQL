@@ -36,7 +36,7 @@ create table p_id(
     p_price decimal(10,2) not null);
 
     /* ALTER TABLE  table_name 
-    ADD CONSTRANT constraint_name 
+    ADD CONSTRAINT constraint_name 
     constarint_type(column_name) */
 
     ALTER TABLE p_id
@@ -51,3 +51,4 @@ create table p_id(
 ALTER TABLE p_id
 ADD CONSTRAINT chk_P_price
 CHECK(p_price>0)
+
